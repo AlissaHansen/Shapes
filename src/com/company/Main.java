@@ -4,10 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Triangle triangleA = new Triangle(15, 8, 15,8, 17);
-        System.out.println(triangleA.findArea());
+        Triangle triangleA = new Triangle(new double[]{1,1}, new double[]{3,7}, new double[] {2,5});
+        double [] test = triangleA.findSideLengths();
+        System.out.println(test[2]);
 
-        Circle circleA = new Circle(5,5,10);
+        Circle circleA = new Circle(new int[]{3, 4}, 6);
         System.out.println(circleA.findArea());
 
         Rectangle rectangleA = new Rectangle(40,60);

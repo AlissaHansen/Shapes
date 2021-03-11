@@ -1,16 +1,16 @@
 package com.company;
 
+import java.lang.reflect.Array;
+
 public class Shape implements ShapeInterface {
     // Triangle attributes
-    double base;
-    double height;
-    double sideLenOne;
-    double sideLenTwo;
-    double sideLenThree;
+    double[] cordTri1 = new double[2];
+    double[] cordTri2 = new double[2];
+    double[] cordTri3 = new double[2];
+
 
     // Circle attributes
-    double xc;
-    double yc;
+    int[] cordCircle = new int[2];
     double rad;
 
     // Rectangle attributes
