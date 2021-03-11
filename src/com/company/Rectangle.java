@@ -8,6 +8,7 @@ public class Rectangle extends Shape {
         this.width = width;
     }
 
+    @Override
     public double findArea() {
         return (rectHeight*width);
     }

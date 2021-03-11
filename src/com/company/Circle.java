@@ -8,8 +8,9 @@ public class Circle extends Shape{
         this.rad = rad;
 
     }
-    public double findArea(){
-        return(Math.PI * Math.pow(rad,2));
 
+    @Override
+    public double findArea() {
+        return(Math.PI * Math.pow(rad,2));
     }
 }

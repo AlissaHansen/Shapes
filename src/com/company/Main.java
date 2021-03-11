@@ -4,9 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Triangle triangleA = new Triangle(new double[]{1,1}, new double[]{3,7}, new double[] {2,5});
-        double [] test = triangleA.findSideLengths();
-        System.out.println(test[2]);
+        Triangle triangleA = new Triangle(new double[]{1,1}, new double[]{7,1}, new double[] {4,8});
+        System.out.println(triangleA.findArea());
 
         Circle circleA = new Circle(new int[]{3, 4}, 6);
         System.out.println(circleA.findArea());
