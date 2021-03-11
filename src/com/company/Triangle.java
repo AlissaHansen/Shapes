@@ -2,6 +2,7 @@ package com.company;
 
 public class Triangle extends Shape {
 
+    double perimeter = 0;
     public Triangle(double[] cordTri1, double[] cordTri2, double[] cordTri3) {
 
        this.cordTri1 = cordTri1;
@@ -25,16 +26,22 @@ public class Triangle extends Shape {
     public double findArea() {
 
         double[] sideLengths = findSideLengths();
-        double perimeter = 0;
         double semiperimeter = 0;
 
         for (int i = 0; i < findSideLengths().length; i++){
             perimeter = perimeter + findSideLengths()[i];
-
         }
-
         semiperimeter = perimeter/2;
-
         return Math.sqrt(semiperimeter*(semiperimeter-sideLengths[0])*(semiperimeter-sideLengths[1])*(semiperimeter-sideLengths[2]));
+    }
+
+    @Override
+    public double[] findCenter() {
+        return null;
+    }
+
+    @Override
+    public double findCircumference() {
+        return perimeter;
     }
 }

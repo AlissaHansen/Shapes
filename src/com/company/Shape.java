@@ -10,17 +10,33 @@ public class Shape implements ShapeInterface {
 
 
     // Circle attributes
-    int[] cordCircle = new int[2];
+    double[] cordCircle = new double[2];
     double rad;
 
     // Rectangle attributes
     double rectHeight;
     double width;
+    double[] cordRect = new double[2];
 
 
     @Override
     public double findArea(){
         return 0;
     }
+
+    @Override
+    public double[] findCenter() {
+        return new double[0];
     }
+
+    @Override
+    public double findCircumference() {
+        return 0;
+    }
+
+    @Override
+    public String isPointinside(int x, int y) {
+       return null;
+    }
+}
 
