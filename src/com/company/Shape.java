@@ -1,6 +1,5 @@
 package com.company;
 
-import java.lang.reflect.Array;
 
 public class Shape implements ShapeInterface {
     // Triangle attributes
@@ -38,5 +37,6 @@ public class Shape implements ShapeInterface {
     public String isPointinside(int x, int y) {
        return null;
     }
+
 }
 

@@ -10,6 +10,8 @@ public class Triangle extends Shape {
        this.cordTri3 = cordTri3;
 
     }
+
+
     public double[] findSideLengths (){
 
         //Afstanden mellem punkterne findes for at finde sidelængderne af tekanterne
@@ -31,8 +33,6 @@ public class Triangle extends Shape {
         return area;
     }
 
-
-
     @Override
     public double[] findCenter() {
 
@@ -42,8 +42,6 @@ public class Triangle extends Shape {
         return centrum;
     }
 
-
-
     @Override
     public double findCircumference() {
         return perimeter;
@@ -51,10 +49,24 @@ public class Triangle extends Shape {
 
     @Override
     public String isPointinside(int x, int y) {
-    double a = findArea();
 
+    double areaA = findArea();
 
+    double areaB = (x * (cordTri2[1] - cordTri3[1]) + cordTri2[0] *
+            (cordTri3[1] - y) + cordTri3[0] * (y - cordTri2[1]))/2;
 
-        return null;
+    double areaC = (x * (cordTri1[1] - cordTri3[1]) + cordTri1[0] *
+            (cordTri3[1] - y) + cordTri3[0] * (y - cordTri1[1]))/2;
+
+    double areaD = (x * (cordTri1[1] - cordTri2[1]) + cordTri1[0] *
+            (cordTri2[1] - y) + cordTri2[0] * (y - cordTri1[1]))/2;
+
+    if (areaA == areaB + areaC + areaD){
+        return "Punktet er i trekanten!";
+    } else {
+        return "Punktet er ikke i trekanten!";
     }
+
+    }
+
 }

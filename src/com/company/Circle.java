@@ -34,4 +34,5 @@ public class Circle extends Shape{
             return "Punktet er i cirklen!";
         }
     }
+
 }
