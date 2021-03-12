@@ -8,6 +8,7 @@ public class Main {
         Triangle triangleA = new Triangle(new double[]{1,1}, new double[]{7,1}, new double[] {4,8});
         System.out.println("Arealet af trekant er: " + triangleA.findArea());
         System.out.println("Omkredsen af trekanten er: " + triangleA.findCircumference());
+        System.out.println("Trekantens centrum ligger i: (" + triangleA.findCenter()[0] +  " , " + triangleA.findCenter()[1] + ")");
         System.out.println("  ");
 
         Circle circleA = new Circle(new double[]{3, 4}, 6);

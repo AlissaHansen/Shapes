@@ -25,23 +25,36 @@ public class Triangle extends Shape {
     @Override
     public double findArea() {
 
-        double[] sideLengths = findSideLengths();
-        double semiperimeter = 0;
+        double area = (cordTri1[0]*(cordTri2[1]-cordTri3[1])+ cordTri2[0]*
+                (cordTri3[1]-cordTri1[1])+cordTri3[0]*(cordTri1[1]-cordTri2[1]))/2;
 
-        for (int i = 0; i < findSideLengths().length; i++){
-            perimeter = perimeter + findSideLengths()[i];
-        }
-        semiperimeter = perimeter/2;
-        return Math.sqrt(semiperimeter*(semiperimeter-sideLengths[0])*(semiperimeter-sideLengths[1])*(semiperimeter-sideLengths[2]));
+        return area;
     }
+
+
 
     @Override
     public double[] findCenter() {
-        return null;
+
+        double centrumX = (cordTri1[0]+cordTri2[0]+cordTri3[0])/3;
+        double centrumY = (cordTri1[1]+cordTri2[1]+cordTri3[1])/3;
+        double[] centrum = {centrumX, centrumY};
+        return centrum;
     }
+
+
 
     @Override
     public double findCircumference() {
         return perimeter;
+    }
+
+    @Override
+    public String isPointinside(int x, int y) {
+    double a = findArea();
+
+
+
+        return null;
     }
 }
