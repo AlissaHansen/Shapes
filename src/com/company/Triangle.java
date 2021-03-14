@@ -2,7 +2,6 @@ package com.company;
 
 public class Triangle extends Shape {
 
-    double perimeter = 0;
     public Triangle(double[] cordTri1, double[] cordTri2, double[] cordTri3) {
 
        this.cordTri1 = cordTri1;
