@@ -11,10 +11,9 @@ public class Triangle extends Shape {
 
     }
 
-
     public double[] findSideLengths (){
 
-        //Afstanden mellem punkterne findes for at finde sidelængderne af tekanterne
+        //Afstanden mellem punkterne findes for at finde sidelængderne af trekanterne
         double sideLen1 = Math.sqrt(Math.pow(cordTri2[0]-cordTri1[0],2) + Math.pow(cordTri2[1]-cordTri1[1],2));
         double sideLen2 = Math.sqrt(Math.pow(cordTri3[0]-cordTri1[0],2) + Math.pow(cordTri3[1]-cordTri1[1],2));
         double sideLen3 = Math.sqrt(Math.pow(cordTri3[0]-cordTri2[0],2) + Math.pow(cordTri3[1]-cordTri2[1],2));
@@ -44,7 +43,8 @@ public class Triangle extends Shape {
 
     @Override
     public double findCircumference() {
-        return perimeter;
+        double omkreds = findSideLengths()[0] + findSideLengths()[1] + findSideLengths()[2];
+        return omkreds;
     }
 
     @Override
