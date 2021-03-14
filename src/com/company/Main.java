@@ -24,5 +24,25 @@ public class Main {
         System.out.println("Omkredsen af rektangel er: " + rectangleA.findCircumference());
         System.out.println(rectangleA.isPointinside(3, 3));
         System.out.println("  ");
+
+        System.out.println(euclideanDistance(new double[] {2,2,}, new double[] {4,5}, new double[] {6,3}));
+    }
+
+    public static String euclideanDistance(double [] triCenter, double[] circleCenter, double [] rectCenter){
+        double triToCircle;
+        double triToRect;
+        double circletoRect;
+
+        triToCircle = Math.sqrt((Math.pow(circleCenter[0] - triCenter[0],2) + Math.pow(circleCenter[1] - triCenter[1],2)));
+        triToRect = Math.sqrt((Math.pow(rectCenter[0] - triCenter[0],2) + Math.pow(rectCenter[1] - triCenter[1],2)));
+        circletoRect = Math.sqrt((Math.pow(rectCenter[0] - circleCenter[0],2) + Math.pow(rectCenter[1] - circleCenter[1],2)));
+
+        String distanceTriCircle = "Afstanden fra trkanten til cirklen er: " + triToCircle;
+        String distanceTriRect = "Afstanden fra trkanten til rektangel er: " + triToRect;
+        String distanceCircleRect = "Afstanden fra cirklen til rektangelen er: " + circletoRect;
+
+        return distanceTriCircle + "\n" + distanceTriRect + "\n" + distanceCircleRect;
+
+
     }
 }
